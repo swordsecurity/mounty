@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# mounty - mount all partitions from an image in current directory
+# mounty - mount all partitions from an image in the current directory using the ID from mmls
 # Usage: mounty image.dd
 
 # script is based on mountall.sh from Luc Gommans
@@ -15,10 +15,10 @@ img="$1";
 bs=$(mmls $img | grep sectors | tr -dc '0-9')
 echo Detected block size $bs
 
-# Every line is read into the variable called $line
+# Iterate over each line and exclude non-mountable partitions / other info
 mmls $img | grep -v 'Offset' | grep -v 'Units' | grep -v 'Primary Table' | grep -v 'Unallocated' | grep '[0-9]' | while read line; do
 
-    # The directory we're going to mount in is the device id
+    # The directory is the device id
     dir=$(echo "$line" | awk '{print $1}' | tr -dc '0-9')
 
     start=$(echo "$line" | awk '{print $3}' | sed 's/^0*//')
