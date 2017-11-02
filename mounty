@@ -29,7 +29,7 @@ mmls $img | grep -v 'Offset' | grep -v 'Units' | grep -v 'Primary Table' | grep 
 
     # Show what we have found and calculated
     echo "id: $dir; sectors $start - $end; offset $offset; mounting readonly..."
-    sudo mount -o ro,noexec,offset=$offset $img $dir
+    sudo mount -o ro,noexec,loop,offset=$offset $img $dir
 
     # If that didn't work, show that it didn't work.
     if [ $? -ne 0 ]; then
