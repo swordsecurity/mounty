@@ -16,7 +16,7 @@ bs=$(mmls $img | grep sectors | tr -dc '0-9')
 echo Detected block size $bs
 
 # Iterate over each line and exclude non-mountable partitions / other info
-mmls $img | grep -v 'Offset' | grep -v 'Units' | grep -v 'Primary Table' | grep -v 'Unallocated' | grep '[0-9]' | while read line; do
+mmls $img | grep -v 'Offset' | grep -v 'Units' | grep -v 'Unallocated' | grep -v 'Meta' | grep '[0-9]' | while read line; do
 
     # The directory is the device id
     dir=$(echo "$line" | awk '{print $1}' | tr -dc '0-9')
@@ -33,6 +33,11 @@ mmls $img | grep -v 'Offset' | grep -v 'Units' | grep -v 'Primary Table' | grep 
 
     # If that didn't work, show that it didn't work.
     if [ $? -ne 0 ]; then
-        echo "ERROR MOUNTING $dir"
+        echo "Trying mounting with norecovery $dir"
+        sudo mount -o norecovery,ro,noexec,loop,offset=$offset $img $dir
+        
+        if [ $? -ne 0 ]; then
+            echo "ERROR: Couldn't mount $dir"
+        fi;
     fi;
 done
