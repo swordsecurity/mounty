@@ -17,7 +17,7 @@ git clone https://github.com/swordsecurity/mounty/
 ### Add mounty to PATH
 Add mounty to PATH if you wish to execute mounty directly with the mounty command.
 ```
-echo 'export PATH=$PATH:[path_to_mounty]' >>  ~/.bashrc
+echo 'export PATH=$PATH:[path_to_mounty_dir]' >>  ~/.bashrc
 ```
 
 # Usage
