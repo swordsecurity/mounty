@@ -21,7 +21,7 @@ echo 'export PATH=$PATH:[path_to_mounty]' >>  ~/.bashrc
 ```
 
 # Usage
-./mounty [image] 
+mounty [image] 
 
 ## Examples
 Example mount image.dd to Evidence folder:
