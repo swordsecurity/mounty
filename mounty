@@ -24,7 +24,7 @@ mmls $img | grep -v 'Offset' | grep -v 'Units' | grep -v 'Unallocated' | grep -v
     start=$(echo "$line" | awk '{print $3}' | sed 's/^0*//')
     end=$(echo "$line" | awk '{print $4}' | sed 's/^0*//')
     
-    mkdir $dir 2>/dev/null #Redirect error if dir exists
+    sudo mkdir $dir 2>/dev/null #Redirect error if dir exists
     offset=$(($start*$bs)) # Calculate the offset to use
 
     # Show what we have found and calculated
