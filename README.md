@@ -1,6 +1,8 @@
 # Mounty: Mount all partitions for forensic analysis
 ## Features
 - Automaticly mount all partitions on an image to your current directory
+- Mounts in read-only (ro)
+- Does not allow the execution of executable binaries (NOEXEC)
 
 ## Prerequisites
 To run mounty, you will need the following:
