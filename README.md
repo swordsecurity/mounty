@@ -2,7 +2,7 @@
 ## Features
 - Mount all partitions on an image to your current directory
 - Mounts in read-only (ro) and does not allow the execution of executable binaries (NOEXEC)
-- Partition names are the same as the names from the mmls command.
+- Partition names are the same as the ids from the mmls command.
 
 ## Prerequisites
 To run mounty, you will need the following:
