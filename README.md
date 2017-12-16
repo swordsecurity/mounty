@@ -1,8 +1,8 @@
 # Mounty: Mount all partitions for forensic analysis
 ## Features
-- Mount all partitions on an image to your current directory
-- Mounts in read-only (ro) and does not allow the execution of executable binaries (NOEXEC)
-- Partition names are the same as the ids from the mmls command.
+- Mount all partitions on an image
+- Mount in read-only (ro) and do not allow execution of executable binaries (NOEXEC)
+- Partition names are the ids from the mmls command.
 
 ## Prerequisites
 To run mounty, you will need the following:
@@ -15,7 +15,7 @@ git clone https://github.com/swordsecurity/mounty/
 ```
 
 ### Add mounty to PATH
-Add mounty to PATH if you wish to execute mounty directly with the mounty command.
+Add mounty to PATH to execute mounty directly with the mounty command.
 ```
 echo 'export PATH=$PATH:[path_to_mounty_dir]' >>  ~/.bashrc
 ```
