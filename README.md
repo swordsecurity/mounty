@@ -3,7 +3,7 @@
 - Automaticly mount all partitions on an image to your current directory
 
 ## Prerequisites
-To run Restbot, you will need the following:
+To run mounty, you will need the following:
 - sleuthkit (apt-get install sleuthkit)
 
 # Usage
