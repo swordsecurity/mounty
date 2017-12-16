@@ -6,6 +6,18 @@
 To run mounty, you will need the following:
 - sleuthkit (apt-get install sleuthkit)
 
+## Installation
+### Git clone this repository
+```
+git clone https://github.com/swordsecurity/mounty/
+```
+
+### Add mounty to PATH
+Add mounty to PATH if you wish to execute mounty directly with the mounty command.
+```
+echo "export PATH=$PATH:[path_to_mounty]" >  ~/.bashrc
+```
+
 # Usage
 ./mounty [image] 
 
