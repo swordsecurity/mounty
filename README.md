@@ -1,8 +1,7 @@
 # Mounty: Mount all partitions for forensic analysis
 ## Features
 - Mount all partitions on an image to your current directory
-- Mounts in read-only (ro)
-- Does not allow the execution of executable binaries (NOEXEC)
+- Mounts in read-only (ro) and does not allow the execution of executable binaries (NOEXEC)
 - Partition names are the same as the names from the mmls command.
 
 ## Prerequisites
