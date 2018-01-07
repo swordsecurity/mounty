@@ -6,7 +6,7 @@
 
 ## Prerequisites
 To run mounty, you will need the following:
-- sleuthkit (apt-get install sleuthkit)
+- sleuthkit (sudo apt-get install sleuthkit)
 
 ## Installation
 ### Git clone this repository
